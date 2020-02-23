@@ -9,10 +9,21 @@
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
-    "jest": "^25.1.0"
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslinter": "^3.2.1",
+    "jest": "^25.1.0",
+    "portfinder": "^1.0.25",
+    "puppeteer": "^2.1.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint meadowlark.js lib integration-tests",
+    "lintfix": "eslint --fix meadowlark.js lib"
   },
   "author": "MisaelVillaverde",
   "license": "ISC"

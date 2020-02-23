@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000
 
 // configure Handlebars view engine
 app.engine('handlebars', expressHandlebars({
-    defaultLayout: 'main',
+  defaultLayout: 'main'
 }))
 app.set('view engine', 'handlebars')
 
@@ -26,13 +26,12 @@ app.use(handlers.notFound)
 // custom 500 page
 app.use(handlers.serverError)
 
-
 // Open server
-if(require.main === module) {
-    app.listen(port, () => console.log(
+if (require.main === module) {
+  app.listen(port, () => console.log(
         `Express server started on http://localhost:${port}; ` +
         'Press Ctrl-c to terminate.'
-    ))
+  ))
 } else {
-    module.exports = app
+  module.exports = app
 }
